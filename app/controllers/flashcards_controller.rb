@@ -38,6 +38,11 @@ class FlashcardsController < ApplicationController
     @flashcard.destroy
   end
 
+  # GET /flashcards/1/tags
+  def tags
+    @flashcard.tags
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_flashcard
