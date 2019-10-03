@@ -1,6 +1,6 @@
 class FlashcardsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_flashcard, only: [:show, :update, :destroy]
+  before_action :set_flashcard, only: [:show, :update, :destroy, :tags]
 
   # GET /flashcards
   def index

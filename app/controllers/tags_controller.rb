@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_tag, only: [:show, :update, :destroy]
+  before_action :set_tag, only: [:show, :update, :destroy, :flashcards]
 
   # GET /tags
   def index
@@ -41,7 +41,7 @@ class TagsController < ApplicationController
 
   # GET /tags/1/flashcards
   def flashcards
-    @tag.flashcards
+    render json: @tag.flashcards, include: :tags
   end
 
   private
